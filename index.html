@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMASHBURGER - New York's Favorite Flavor. Smashed</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<!-- FEEDBACK POPUP - LIKE REAL SITE -->
+<button class="feedback-btn" onclick="openFeedback()">Feedback</button>
+
+<div id="feedbackModal" class="feedback-overlay" onclick="closeFeedback(event)">
+  <div class="feedback-box">
+    <button class="feedback-close" onclick="document.getElementById('feedbackModal').style.display='none'">X</button>
+    
+    <div class="feedback-logo">SMASH<br>BURGER<span>®</span></div>
+    
+    <div class="feedback-lang">English ⌄</div>
+
+    <h3>Tell Us How We Did!</h3>
+    <p class="feedback-sub">We want every bite, every click, every visit to hit the spot.</p>
+    <p class="feedback-q">What's your feedback about?</p>
+
+    <button class="feedback-option" onclick="showThanks('Website Experience')">
+      Website Experience <span>→</span>
+    </button>
+
+    <button class="feedback-option" onclick="showThanks('Restaurant / Order Experience')">
+      Restaurant / Order Experience <span>→</span>
+    </button>
+
+    <p id="feedbackThanks" class="feedback-thanks"></p>
+    <p class="feedback-powered">Powered by Qualtrics</p>
+  </div>
+</div>
+
+<script>
+function openFeedback(){
+  document.getElementById('feedbackModal').style.display='flex';
+}
+function closeFeedback(e){
+  if(e.target.id === 'feedbackModal'){
+    document.getElementById('feedbackModal').style.display='none';
+  }
+}
+function showThanks(type){
+  document.getElementById('feedbackThanks').innerHTML = 'Thanks! You picked: <b>' + type + '</b> — Tell us more below!';
+}
+</script>
+
+<body>
+
+<div class="topbar">America's favorite dessert just found a straw. Meet the Apple Pie Shake. <b>Order Now →</b></div>
+
+<header>
+  <a href="#" class="logo">SMASH<span>BURGER</span><small>BELIEF IS IN THE BITE™</small></a>
+  <nav id="nav">
+    <a href="#menu">Menu</a><a href="#rewards">SmashRewards</a><a href="#gift">Gift Cards</a><a href="#deals">Deals</a><a href="#catering">Catering</a><a href="#locations">Locations</a>
+  </nav>
+  <div class="head-btns">
+    <button class="signin">SIGN IN</button>
+    <button class="cart-btn" id="cartOpen">🛒 <span id="cartCount">0</span></button>
+    <button id="menuBtn">☰</button>
+  </div>
+</header>
+
+<div class="locbar"><span>📍 CHOOSE A LOCATION TO ORDER</span><button class="order-white" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">ORDER NOW</button></div>
+
+<!-- ===== SECTION 1: HERO ===== -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>NEW YORK'S<br>FAVORITE<br>FLAVOR.<br><span>SMASHED</span></h1>
+    <p class="hero-sub">DISCOVER THE LATEST SMASH. </p>
+    <button class="red-btn" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})"></button>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1000&q=80" alt="NY Burger">
+    <div class="bite">BELIEF<br><em>IS IN</em><br>THE BITE</div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: REWARDS - LIKE REAL SITE ===== -->
+<section class="rewards-like-real">
+  <div class="rewards-card">
+    <div class="rewards-img">
+      <img src="image.jpeg"alt="SmashRewards $5 Off $15">
+    </div>
+    <div class="rewards-text">
+      <h2>TURN CRAVINGS INTO REWARDS</h2>
+      <p>Join SmashRewards and unlock $5 off your first $15+ order. Plus earn 10 points for every dollar spent.</p>
+      <p class="small">Sign up, dig in, and save. It's that easy.</p>
+      <div class="rewards-btns">
+        <a href="#" class="btn-red">SIGN UP</a>
+        <a href="#" class="btn-white">LEARN MORE</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: MENU ===== -->
+<section id="menu" class="menu">
+  <h2>MENU</h2>
+  <div class="filters" id="filters">
+    <button class="active" data-f="all">All</button><button data-f="burger">Burgers</button><button data-f="chicken">Chicken</button><button data-f="sides">Sides</button><button data-f="shakes">Shakes</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<!-- CRAFT - EXACT LIKE REAL SITE -->
+<section class="craft-real">
+  <div class="craft-real-img">
+    <img src="craft.jpg" alt="Smash Due">
+  </div>
+  <div class="craft-real-text">
+    <h2>WE TAKE PRIDE IN OUR CRAFT</h2>
+    <p>Our made-to-order burgers are built differently. Using our signature proprietary burger smasher, our culinary masters utilize a special smashing technique to create a mouthwatering caramelized, crispy sear that seals in all the juicy goodness within.</p>
+    <p>Our passion for culinary innovation drives us to continuously experiment with thousands of ingredient combinations until we achieve the perfect recipe. In a fast-changing culinary landscape, we remain committed to pushing boundaries while using only the finest, high-quality ingredients. From our custom burger spice blend to every carefully selected topping, each ingredient is chosen for maximum flavor impact and a distinctive, bold taste in every bite.</p>
+        <a href="#" class="craft-btn">ABOUT OUR FOOD</a>
+  </div>
+</section>
+
+<!-- ===== CARDS SECTION - LIKE REAL SITE ===== -->
+<section class="red-section">
+  <div class="cards-3">
+    <!-- CARD 1 -->
+    <div class="card">
+      <img src="gift.jpg.jpeg"Gift Cards">
+      <h3>GIFT CARDS</h3>
+      <p>Purchase a virtual gift card! Available in $15, $25 and $50. Choose the gift that fits the...</p>
+      <button>BUY GIFT CARDS</button>
+    </div>
+    <!-- CARD 2 -->
+    <div class="card">
+      <img src="rewards.jpg.jpeg"Rewards">
+      <h3>JOIN SMASHREWARDS</h3>
+      <p>Order Smashburger and earn, save your favorite orders, earn points, and get rewarded for every bite.</p>
+      <button>JOIN SMASHREWARDS</button>
+    </div>
+    <!-- CARD 3 -->
+    <div class="card">
+      <img src="catering.jpg.jpeg" alt="Catering">
+      <h3>CATERING</h3>
+      <p>Make your next event a Smashin' success with catering for any occasion.</p>
+      <button>CATERING</button>
+    </div>
+  </div>
+
+  <div class="cards-2">
+    <div class="card">
+      <img src="grill.jpg.jpeg" alt="Fresh Off Grill">
+      <h3>FRESH OFF THE GRILL</h3>
+      <p>New menu drops, brand updates, and the latest from the world of smash. See what's happening at...</p>
+      <button>READ ALL ABOUT US</button>
+    </div>
+    <div class="card">
+      <img src="inside.jpg.jpeg" alt="Inside Smash">
+      <h3>GET THE INSIDE SMASH</h3>
+      <p>Think you know burgers? Think again. From beef basics to pro cooking secrets and expert tips, we're spilling all the...</p>
+      <button>EXPLORE THE BURGER HUB</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER - LIKE REAL SITE ===== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo">SMASH<br>BURGER<span>®</span><br><small>DOWNLOAD OUR APP</small></div>
+    <div>
+      <h4>HELPFUL LINKS</h4>
+      <a href="#">About Us</a><a href="#">Our Food</a><a href="#">Nutrition</a><a href="#">Delivery</a><a href="#">Rewards</a><a href="#">Gift Cards</a><a href="#">Locations</a>
+    </div>
+    <div>
+      <h4>INQUIRIES</h4>
+      <a href="#">Careers</a><a href="#">Franchising</a><a href="#">FAQ</a><a href="#">Smashburger® Certified Angus Beef®</a><a href="#">Supply Chain</a><a href="#">Contact Us</a>
+    </div>
+    <div>
+      <h4>POPULAR SEARCHES</h4>
+      <a href="#">The Burger Hub</a><a href="#">What Is A Smash Burger?</a><a href="#">Smash Burger Recipe</a><a href="#">Burgers & Fries</a><a href="#">Burgers & Shakes</a><a href="#">Double Smashburger®</a>
+    </div>
+    <div class="app-btns">
+      <button>▶ Google Play</button>
+      <button> App Store</button>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Smashburger IP Holder LLC. All rights reserved. | Accessibility | Terms of Service | Privacy Policy</div>
+</footer>
+
+
+<div id="cartDrawer"><h3>Your Order <button id="closeCart">✕</button></h3><div id="cartItems">Cart is empty</div><p style="margin-top:16px">Total: <b id="cartTotal">$0.00</b></p><button class="red-btn full" onclick="alert('Checkout!')">CHECKOUT</button></div>
+<div id="overlay"></div>
+<script src="script.js"></script>
+</body>
+</html>
